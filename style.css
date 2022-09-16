@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 80%;
+  margin: 2rem auto;
+}
+h1 {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 2rem;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex is used to align the image elements within the container */
+  /* wrap is used to wrap the images inside the container from top to bottom */
+}
+.gallery img {
+  margin: 10px;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  height: 250px;
+  /* here defined a specific width and height to all images to provide the same area to all images */
+  object-fit: cover;
+  object-position: center;
+  transition: all 5s ease 1s;
+}
+.gallery img:hover {
+  cursor: pointer;
+  width: 350px;
+  height: 250px;
+  transform: rotate(360deg);
+}
